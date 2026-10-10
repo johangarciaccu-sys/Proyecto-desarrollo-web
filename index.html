@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStore - Computadores & Periféricos</title>
+
+  <!-- Fuentes de Google e Iconos Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-microchip"></i>
+        <span>JStore</span>
+      </a>
+      <button class="cart-btn" id="open-cart-btn">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Carrito</span>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SECCIÓN HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Computadores & Periféricos de Alto Rendimiento</h1>
+      <p>Explora nuestro catálogo interactivo con tecnología de vanguardia.</p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-container">
+    
+    <!-- BARRA DE CONTROLES (BÚSQUEDA Y FILTROS) -->
+    <div class="controls-panel">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="search-input" class="input-field" placeholder="Buscar por nombre o descripción...">
+      </div>
+      <div>
+        <select id="category-filter" class="select-field">
+          <option value="all">Todas las categorías</option>
+          <option value="computadores">Computadores</option>
+          <option value="perifericos">Periféricos</option>
+          <option value="monitores">Monitores</option>
+        </select>
+      </div>
+      <div>
+        <select id="sort-filter" class="select-field">
+          <option value="default">Ordenar por...</option>
+          <option value="price-asc">Precio: Menor a Mayor</option>
+          <option value="price-desc">Precio: Mayor a Menor</option>
+          <option value="name-asc">Nombre: A - Z</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <div class="catalog-grid" id="catalog-container">
+      <!-- Generado dinámicamente con JavaScript -->
+    </div>
+
+  </main>
+
+  <!-- MODAL: DETALLES DEL PRODUCTO -->
+  <div class="modal-overlay" id="details-modal">
+    <div class="modal-content">
+      <button class="close-modal" id="close-details-btn">&times;</button>
+      <div id="modal-details-body"></div>
+    </div>
+  </div>
+
+  <!-- MODAL: CARRITO DE COMPRAS -->
+  <div class="modal-overlay" id="cart-modal">
+    <div class="modal-content">
+      <button class="close-modal" id="close-cart-btn">&times;</button>
+      <h2><i class="fa-solid fa-cart-shopping"></i> Tu Carrito de Compras</h2>
+      <div class="cart-items-list" id="cart-items-container">
+        <!-- Elementos del carrito cargados por JS -->
+      </div>
+      <div class="cart-total-container">
+        <span>Total Estimado:</span>
+        <span id="cart-total-price">$ 0 COP</span>
+      </div>
+      <button class="btn-checkout" id="checkout-btn">Simular Compra</button>
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="footer-info">
+      <p><strong>Proyecto Académico:</strong> Tienda de Computadores y Periféricos en Línea</p>
+      <p><strong>Integrante:</strong> Johan Andrey García Cuervo | <strong>Docente:</strong> John Fredy Céspedes Beltrán</p>
+      <p>Corporación Unificada Nacional — Desarrollo Web (2026)</p>
+    </div>
+  </footer>
+
+  <!-- Script externo -->
+  <script src="script.js"></script>
+</body>
+</html>
